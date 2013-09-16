@@ -1,0 +1,97 @@
+@green: #2ecc71;
+@basefont: 21px;
+
+.square(@size){
+	width: @size;
+	height: @size;
+}
+
+.roundedbutton {
+	border-radius: 10px;
+	background: red;
+	color: #fff;
+}
+
+.fontstyle(@fontcolor) {
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-size: @basefont;
+	color: @fontcolor;
+	font-weight: 300;
+	text-decoration: underline;
+	line-height: 42px;
+}
+
+h1 {
+	font-size: @basefont * 4;
+}
+
+p {
+	font-size: @basefont - 3;
+}
+
+body {
+	.fontstyle(#34495e);
+}
+
+header {
+	background-color: @green;
+	width: 800px;
+		nav {
+			background-color:red;
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				li {
+					margin-right: 15px;
+					display: inline;
+					&:last-child {
+							margin-left: 200px;
+					}
+					&:nth-child(2) {
+						color: orange;
+					}
+				}
+			}
+		}
+}
+
+a {
+	color: black;
+	&:hover {
+		text-decoration: none;
+		color:red;
+	}
+}
+
+section {
+		width: 800px;
+		background-color: @green;
+		article {
+				header {
+						width: 400px;
+						background-color: orange;
+						h2 {
+								font-size: @basefont * 1.5;
+						}
+				}
+				p {
+					button[type="submit"] {
+						.roundedbutton;
+						padding: 5px 2px;
+					}
+				}
+		}
+}
+
+
+footer {
+	.mysquare {
+		.square(45px);
+		background-color: black;
+	}
+}
+
+
+
+
